@@ -7,7 +7,7 @@ r = sr.Recognizer()
 # Reading audio from the microphone
 with sr.Microphone() as source:
     print("Say something:")
-    audio_text = r.listen(source)  # Timeout is set to 5 seconds, adjust as needed
+    audio_text = r.listen(source, timeout=10)  # Timeout is set to 5 seconds, adjust as needed
 
 # recognize_() method will throw a request error if the API is unreachable, hence using exception handling
 try:
